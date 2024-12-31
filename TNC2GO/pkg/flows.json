@@ -1,0 +1,1576 @@
+[
+    {
+        "id": "087e11fe2b6bda4c",
+        "type": "tab",
+        "label": "TNC2GO",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "428af6f86b508d3a",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "Modems",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ae3841485f6c808c",
+            "83fcc9f1b015b6f1",
+            "437fc1c328131210",
+            "8260920fc4c44d5b",
+            "01d6aa9293f551a1",
+            "4f7c9a89384d75c4",
+            "4618db2bdad7b41f",
+            "da4bbcec8a4e0c03",
+            "87f2d61b162d6887",
+            "067feb6037aca1dd",
+            "64e8480a60c62a87",
+            "a8f7d6f349e2d49a",
+            "4b0a689239272b30",
+            "fb9db2c55859dd1e",
+            "3cb6c27434e8842c",
+            "d028bef007a57cd2",
+            "230ad5d254384d8d",
+            "fd7aa995611c9007",
+            "6d2fc53e67acf7b6",
+            "d5b44e2b641c331c"
+        ],
+        "x": 34,
+        "y": 159,
+        "w": 1432,
+        "h": 469.5
+    },
+    {
+        "id": "ea12b5cc406cd823",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "Field Ops",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5bb24f9c03e2b9d0",
+            "3b85c952459cb6b1",
+            "eb7e93ab695fc7d5",
+            "b4c56da195387412",
+            "a573dd7542fb73c9",
+            "10bede9eb805bce8",
+            "417e40baef1798b7",
+            "c4fb1a3c8c14a177",
+            "70a380215801241e"
+        ],
+        "x": 34,
+        "y": 659,
+        "w": 1312,
+        "h": 189.5
+    },
+    {
+        "id": "ad3322d9ad753980",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "Power Settings",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4365d5c6c8f78236",
+            "bf8a257c57638263",
+            "d6118e43e45316ec",
+            "f05e42c8319919f2",
+            "00c280ff3b7de3c9"
+        ],
+        "x": 34,
+        "y": 891.5,
+        "w": 752,
+        "h": 149.5
+    },
+    {
+        "id": "1589bf8f32f6d08c",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "Open Terminal",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "af70dc2753c709f9",
+            "de2c76489646d4d6"
+        ],
+        "x": 34,
+        "y": 1051.5,
+        "w": 362,
+        "h": 97
+    },
+    {
+        "id": "403df57ae7f1c8ab",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "Winlink",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "9bc041284f29894e",
+            "8198f7671e3a5329",
+            "b550db02465b0e3d",
+            "c3c07b179e858ba6",
+            "44f48fa63a40e71c",
+            "c990f436e8a61bee",
+            "cddb5cd57e800458",
+            "370388b9b315ed28",
+            "55143b4b64f65443"
+        ],
+        "x": -22,
+        "y": 1153,
+        "w": 728,
+        "h": 295.5
+    },
+    {
+        "id": "55143b4b64f65443",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "fabd98ab217849f8"
+        ],
+        "x": 4,
+        "y": 1179,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "e1ddacc31990e572",
+        "type": "ui_tab",
+        "name": "tnc2go",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5d40bdebedfa764a",
+        "type": "ui_group",
+        "name": "Focus",
+        "tab": "e1ddacc31990e572",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "24669e8a3b41ac4c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#000000",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#cdcdcd",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#262626",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "blue-grey",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "arcOS Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "none",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8244048d88184502",
+        "type": "ui_group",
+        "name": "Modem",
+        "tab": "e1ddacc31990e572",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8643ede2841d0862",
+        "type": "ui_tab",
+        "name": "Power Settings",
+        "icon": "power_settings_new",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c5904713a5f575b7",
+        "type": "ui_group",
+        "name": "Options",
+        "tab": "8643ede2841d0862",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "06745b7b278320f1",
+        "type": "ui_tab",
+        "name": "Pat Winlink",
+        "icon": "markunread_mailbox",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6515a2df7f2a50a8",
+        "type": "ui_group",
+        "name": "Settings",
+        "tab": "06745b7b278320f1",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1f26a128964cd0bb",
+        "type": "ui_group",
+        "name": "Global",
+        "tab": "e1ddacc31990e572",
+        "order": 4,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "437fc1c328131210",
+        "type": "ui_switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "label": "Packet",
+        "tooltip": "Turn this on for APRS and Packet mode on Winlink",
+        "group": "8244048d88184502",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 390,
+        "y": 240,
+        "wires": [
+            [
+                "8260920fc4c44d5b"
+            ]
+        ]
+    },
+    {
+        "id": "8260920fc4c44d5b",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "aprs.switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 240,
+        "wires": [
+            [
+                "01d6aa9293f551a1"
+            ],
+            [
+                "4b0a689239272b30"
+            ]
+        ]
+    },
+    {
+        "id": "01d6aa9293f551a1",
+        "type": "change",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 240,
+        "wires": [
+            [
+                "4618db2bdad7b41f",
+                "a8f7d6f349e2d49a"
+            ]
+        ]
+    },
+    {
+        "id": "4f7c9a89384d75c4",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "437fc1c328131210"
+            ]
+        ]
+    },
+    {
+        "id": "4618db2bdad7b41f",
+        "type": "ui_switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "label": "Vara",
+        "tooltip": "Turn this on for Vara FM and Vara HF",
+        "group": "8244048d88184502",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 370,
+        "y": 500,
+        "wires": [
+            [
+                "da4bbcec8a4e0c03"
+            ]
+        ]
+    },
+    {
+        "id": "da4bbcec8a4e0c03",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "winlink.switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 560,
+        "y": 500,
+        "wires": [
+            [
+                "87f2d61b162d6887"
+            ],
+            [
+                "3cb6c27434e8842c"
+            ]
+        ]
+    },
+    {
+        "id": "87f2d61b162d6887",
+        "type": "change",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 500,
+        "wires": [
+            [
+                "437fc1c328131210",
+                "fb9db2c55859dd1e"
+            ]
+        ]
+    },
+    {
+        "id": "067feb6037aca1dd",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "4618db2bdad7b41f"
+            ]
+        ]
+    },
+    {
+        "id": "64e8480a60c62a87",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "4618db2bdad7b41f"
+            ]
+        ]
+    },
+    {
+        "id": "a8f7d6f349e2d49a",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "command": "direwolf -c /opt/arcOS/configs/direwolf.conf",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "start-direwolf",
+        "x": 1050,
+        "y": 240,
+        "wires": [
+            [],
+            [],
+            [
+                "ae3841485f6c808c"
+            ]
+        ]
+    },
+    {
+        "id": "4b0a689239272b30",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "command": "pkill direwolf",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "stop-direwolf",
+        "x": 1030,
+        "y": 320,
+        "wires": [
+            [],
+            [],
+            [
+                "fd7aa995611c9007"
+            ]
+        ]
+    },
+    {
+        "id": "fb9db2c55859dd1e",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "command": "varanny -config /opt/arcOS/configs/varanny.json",
+        "addpay": "payload",
+        "append": "on",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "start vara",
+        "x": 980,
+        "y": 500,
+        "wires": [
+            [],
+            [],
+            [
+                "83fcc9f1b015b6f1"
+            ]
+        ]
+    },
+    {
+        "id": "3cb6c27434e8842c",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "command": "pkill varanny; pkill VARA",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "stop vara",
+        "x": 980,
+        "y": 580,
+        "wires": [
+            [],
+            [],
+            [
+                "d028bef007a57cd2"
+            ]
+        ]
+    },
+    {
+        "id": "ae3841485f6c808c",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "Is it on?",
+        "func": "if (msg.payload && typeof msg.payload === 'object' && msg.payload.code === 0) {\n    node.status({ fill: \"green\", shape: \"dot\", text: \"code is 0\" });\n    msg.payload = \"On\";\n\n} else {\n    msg.payload = \"Off\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "83fcc9f1b015b6f1",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "Is it on?",
+        "func": "if (msg.payload && typeof msg.payload === 'object' && msg.payload.code === 0) {  \n    node.status({fill:\"green\",shape:\"dot\",text:\"code is 0\"});\n    msg.payload = \"On\" ;\n    \n} else {  \n    msg.payload = \"Off\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1340,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d028bef007a57cd2",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1200,
+        "y": 580,
+        "wires": [
+            [
+                "230ad5d254384d8d"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "230ad5d254384d8d",
+        "type": "change",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1360,
+        "y": 580,
+        "wires": [
+            [
+                "83fcc9f1b015b6f1"
+            ]
+        ]
+    },
+    {
+        "id": "fd7aa995611c9007",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1190,
+        "y": 340,
+        "wires": [
+            [
+                "6d2fc53e67acf7b6"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6d2fc53e67acf7b6",
+        "type": "change",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1340,
+        "y": 340,
+        "wires": [
+            [
+                "ae3841485f6c808c"
+            ]
+        ]
+    },
+    {
+        "id": "d5b44e2b641c331c",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "428af6f86b508d3a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "437fc1c328131210"
+            ]
+        ]
+    },
+    {
+        "id": "5bb24f9c03e2b9d0",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 800,
+        "wires": [
+            [
+                "3b85c952459cb6b1"
+            ]
+        ]
+    },
+    {
+        "id": "3b85c952459cb6b1",
+        "type": "ui_switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "",
+        "label": "Field Ops",
+        "tooltip": "",
+        "group": "5d40bdebedfa764a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 280,
+        "y": 760,
+        "wires": [
+            [
+                "b4c56da195387412"
+            ]
+        ]
+    },
+    {
+        "id": "eb7e93ab695fc7d5",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "3b85c952459cb6b1"
+            ]
+        ]
+    },
+    {
+        "id": "b4c56da195387412",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 430,
+        "y": 760,
+        "wires": [
+            [
+                "10bede9eb805bce8"
+            ],
+            [
+                "a573dd7542fb73c9"
+            ]
+        ]
+    },
+    {
+        "id": "a573dd7542fb73c9",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "command": "pkill fldigi; pkill flmsg; pkill flamp; pkill flrig",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Stop Field Ops",
+        "x": 620,
+        "y": 800,
+        "wires": [
+            [],
+            [],
+            [
+                "417e40baef1798b7"
+            ]
+        ]
+    },
+    {
+        "id": "10bede9eb805bce8",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "command": "/opt/arcOS/bin/start-field-ops.sh",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Field Ops",
+        "x": 600,
+        "y": 720,
+        "wires": [
+            [],
+            [],
+            [
+                "c4fb1a3c8c14a177"
+            ]
+        ]
+    },
+    {
+        "id": "417e40baef1798b7",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 820,
+        "y": 800,
+        "wires": [
+            [
+                "70a380215801241e"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "c4fb1a3c8c14a177",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "Is it on?",
+        "func": "if (msg.payload && typeof msg.payload === 'object' && msg.payload.code === 0) {  \n    node.status({fill:\"green\",shape:\"dot\",text:\"code is 0\"});\n    msg.payload = \"On\" ;\n    \n} else {  \n    msg.payload = \"Off\";\n}\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70a380215801241e",
+        "type": "change",
+        "z": "087e11fe2b6bda4c",
+        "g": "ea12b5cc406cd823",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 800,
+        "wires": [
+            [
+                "c4fb1a3c8c14a177"
+            ]
+        ]
+    },
+    {
+        "id": "4365d5c6c8f78236",
+        "type": "ui_button",
+        "z": "087e11fe2b6bda4c",
+        "g": "ad3322d9ad753980",
+        "name": "Shutdown",
+        "group": "c5904713a5f575b7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Shutdown",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "power",
+        "payload": "shutdown",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "d6118e43e45316ec"
+            ]
+        ]
+    },
+    {
+        "id": "bf8a257c57638263",
+        "type": "ui_button",
+        "z": "087e11fe2b6bda4c",
+        "g": "ad3322d9ad753980",
+        "name": "Reboot",
+        "group": "c5904713a5f575b7",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Reboot",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "refresh",
+        "payload": "reboot",
+        "payloadType": "str",
+        "topic": "payload",
+        "topicType": "msg",
+        "x": 130,
+        "y": 1000,
+        "wires": [
+            [
+                "d6118e43e45316ec"
+            ]
+        ]
+    },
+    {
+        "id": "af70dc2753c709f9",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "1589bf8f32f6d08c",
+        "command": "/bin/bash -c \"hostname -I | grep -oP '^\\\\d+\\\\.\\\\d+\\\\.\\\\d+\\\\.\\\\d+'\"",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "get-ipaddr",
+        "x": 300,
+        "y": 1100,
+        "wires": [
+            [
+                "106a8e74a6fd8745"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "de2c76489646d4d6",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "1589bf8f32f6d08c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 1100,
+        "wires": [
+            [
+                "af70dc2753c709f9"
+            ]
+        ]
+    },
+    {
+        "id": "fabd98ab217849f8",
+        "type": "ui_button",
+        "z": "087e11fe2b6bda4c",
+        "g": "55143b4b64f65443",
+        "name": "",
+        "group": "6515a2df7f2a50a8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Pat Autoconnect",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 1220,
+        "wires": [
+            [
+                "9bc041284f29894e"
+            ]
+        ]
+    },
+    {
+        "id": "9bc041284f29894e",
+        "type": "ui_dropdown",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "name": "Band Selection",
+        "label": "band",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "6515a2df7f2a50a8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "15m",
+                "value": "15m",
+                "type": "str"
+            },
+            {
+                "label": "17m",
+                "value": "17m",
+                "type": "str"
+            },
+            {
+                "label": "20m",
+                "value": "20m",
+                "type": "str"
+            },
+            {
+                "label": "40m",
+                "value": "40m",
+                "type": "str"
+            },
+            {
+                "label": "80m",
+                "value": "80m",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 320,
+        "y": 1220,
+        "wires": [
+            [
+                "8198f7671e3a5329"
+            ]
+        ]
+    },
+    {
+        "id": "8198f7671e3a5329",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "command": "/opt/arcOS/bin/pat-autoconnect.py --band ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "pat-autoconnect.py",
+        "x": 570,
+        "y": 1220,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b550db02465b0e3d",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 1400,
+        "wires": [
+            [
+                "c3c07b179e858ba6"
+            ]
+        ]
+    },
+    {
+        "id": "c3c07b179e858ba6",
+        "type": "ui_switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "name": "",
+        "label": "Pat Winlink",
+        "tooltip": "",
+        "group": "6515a2df7f2a50a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 270,
+        "y": 1360,
+        "wires": [
+            [
+                "c990f436e8a61bee"
+            ]
+        ]
+    },
+    {
+        "id": "44f48fa63a40e71c",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 1340,
+        "wires": [
+            [
+                "c3c07b179e858ba6"
+            ]
+        ]
+    },
+    {
+        "id": "c990f436e8a61bee",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "name": "switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 410,
+        "y": 1360,
+        "wires": [
+            [
+                "370388b9b315ed28"
+            ],
+            [
+                "cddb5cd57e800458"
+            ]
+        ]
+    },
+    {
+        "id": "cddb5cd57e800458",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "command": "sudo systemctl stop pat@user",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "stop pat http",
+        "x": 590,
+        "y": 1400,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "370388b9b315ed28",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "403df57ae7f1c8ab",
+        "command": "sudo systemctl start pat@user",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "true",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "start pat http",
+        "x": 610,
+        "y": 1320,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "106a8e74a6fd8745",
+        "type": "ui_template",
+        "z": "087e11fe2b6bda4c",
+        "group": "1f26a128964cd0bb",
+        "name": "Header Buttons ",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n    (function(scope) {\n        // Wait for the dashboard to load\n        const header = document.querySelector('.md-toolbar-tools');\n        if (header) {\n            // Add a flex container to manage button layout\n            const buttonContainer = document.createElement('div');\n            buttonContainer.style.display = 'flex';\n            buttonContainer.style.gap = '10px'; // Space between buttons\n            buttonContainer.style.position = 'absolute';\n            buttonContainer.style.right = '10px'; // Align to the right\n            buttonContainer.style.top = '0'; // Align with the top of the header\n            buttonContainer.style.padding = '5px';\n\n            // pat winlink\n            const mail = document.createElement('button');\n            mail.style.padding = '0'; // Remove padding\n            mail.style.border = 'none'; // Remove border\n            mail.style.background = 'none'; // Remove background\n            mail.style.fontSize = '18px'; // Adjust icon size\n            mail.style.color = '#FFFFFF'; // Set icon color to white for visibility\n            mail.innerHTML = '<i class=\"material-icons\">mail</i>'; // Use material-icons mail icon\n            mail.onclick = function() {\n                if (scope.serverIP) {\n                    const url = `http://${scope.serverIP}:8080/ui#`;\n                    window.open(url, '_blank');\n                } else {\n                    alert('Server IP is not set!');\n                }\n            };\n\n            // terminal\n            const terminal = document.createElement('button');\n            terminal.style.padding = '0'; // Remove padding\n            terminal.style.border = 'none'; // Remove border\n            terminal.style.background = 'none'; // Remove background\n            terminal.style.fontSize = '18px'; // Adjust icon size\n            terminal.style.color = '#FFFFFF'; // Set icon color to white for visibility\n            terminal.innerHTML = '<i class=\"material-icons\">terminal</i>'; // Use material-icons terminal icon\n            terminal.onclick = function() {\n                if (scope.serverIP) {\n                    const url = `http://${scope.serverIP}:9080/`;\n                    window.open(url, '_blank');\n                } else {\n                    alert('Server IP is not set!');\n                }\n            };\n\n            // noVNC\n            const noVNC = document.createElement('button');\n            noVNC.style.padding = '0'; // Remove padding\n            noVNC.style.border = 'none'; // Remove border\n            noVNC.style.background = 'none'; // Remove background\n            noVNC.style.fontSize = '18px'; // Adjust icon size\n            noVNC.style.color = '#FFFFFF'; // Set icon color to white for visibility\n            noVNC.innerHTML = '<i class=\"material-icons\">computer</i>'; // Use material-icons computer icon\n            noVNC.onclick = function() {\n            if (scope.serverIP) {\n                const url = `http://${scope.serverIP}:6080/vnc.html?host=${scope.serverIP}&port=6080`;\n                window.open(url, '_blank');\n            } else {\n                alert('Server IP is not set!');\n            }\n            };\n\n            // Append buttons to the container\n            buttonContainer.appendChild(mail);\n            buttonContainer.appendChild(terminal);\n            buttonContainer.appendChild(noVNC);\n\n            // Append the container to the header\n            header.appendChild(buttonContainer);\n        }\n\n        // Watch for changes in the payload\n        scope.$watch('msg.payload', function(newValue) {\n            if (newValue) {\n                scope.serverIP = newValue.trim(); // Store and trim the IP address\n            }\n        });\n    })(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6118e43e45316ec",
+        "type": "ui_toast",
+        "z": "087e11fe2b6bda4c",
+        "g": "ad3322d9ad753980",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Yes",
+        "cancel": "No",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "Are you sure?",
+        "x": 330,
+        "y": 940,
+        "wires": [
+            [
+                "f05e42c8319919f2"
+            ]
+        ]
+    },
+    {
+        "id": "f05e42c8319919f2",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "ad3322d9ad753980",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "Yes",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "No",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 490,
+        "y": 940,
+        "wires": [
+            [
+                "00c280ff3b7de3c9"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "00c280ff3b7de3c9",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "ad3322d9ad753980",
+        "command": "sudo ",
+        "addpay": "topic",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "shutdown or reboot",
+        "x": 670,
+        "y": 940,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    }
+]

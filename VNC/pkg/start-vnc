@@ -1,0 +1,16 @@
+#!/bin/bash
+
+MYCALL=$(head -n 1 $HOME/.station-info)
+
+IPADDR=$(ip a show up | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk -F " " '{print $2}' | awk -F "/" '{print $1}' | head -n 1)
+
+echo
+if ! pidof x11vnc > /dev/null 2>&1; then
+    if [ ! -z "${IPADDR}" ]; then
+        sudo systemctl enable --now x11vnc.service > /dev/null 2>&1
+        touch /tmp/vnc-active
+        notify-send --urgency normal --icon virt-viewer "Desktop Sharing Enabled" "Remote Viewer clients can connect to vnc://$IPADDR:5900.\n\nThe password for clients is \"${MYCALL}\""
+    else
+		notify-send --urgency normal --icon error "Desktop Sharing Failed!" "Not connected to a network. Please connect to a network and try again."
+    fi
+fi

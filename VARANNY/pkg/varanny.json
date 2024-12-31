@@ -1,0 +1,32 @@
+{
+  "Port": 8273,
+  "Delay": 0,
+  "Modems": [
+    {
+      "Name": "XIEGU-G90",
+      "Type": "hf",
+      "Cmd": "/opt/arcOS/bin/start-vara-hf-for-varanny.sh",
+      "Args": "/home/user/.wine_vara_32/drive_c/VARA/VARA.exe",
+      "Config": "/home/user/.wine_vara_32/drive_c/VARA/VARA.ini",
+      "CatCtrl": {
+        "Port": 4532,
+        "Dialect": "hamlib",
+        "Cmd": "rigctld",
+        "Args": "-m 3063 -r /dev/ttyUSB0 -s 19200"
+      }    
+    },
+    {
+      "Name": "FTM-6000R",
+      "Type": "fm",
+      "Cmd": "/opt/arcOS/bin/start-vara-fm-for-varanny.sh",
+      "Args": "/home/user/.wine_vara_32/drive_c/VARA FM/VARAFM.exe",
+      "CatCtrl": {
+        "Port": 4532,
+        "Dialect": "hamlib",
+        "Cmd": "rigctld",
+        "Args": "-m 3063 -r /dev/ttyUSB0 -s 19200"
+      }    
+    }
+  ]
+}
+
