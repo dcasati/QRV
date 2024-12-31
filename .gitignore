@@ -4,9 +4,14 @@
 # Ignore all distfiles
 */distfiles/*
 
+# Ignore all of the shell scripts
+*.sh
+
 TNC2GO/npm-cache/
 TNC2GO/run/
 TNC2GO/setup_20.x.sh
 
 FL-SUITE/pkg/notify.prefs
 FL-SUITE/pkg/fldigi_def.xml
+
+VARANNY/varanny/
