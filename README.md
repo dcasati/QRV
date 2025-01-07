@@ -55,7 +55,7 @@ tnc2go is a solution that allows for headless control over an arcOS system provi
 
 <p align="center">
   <img 
-    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-main.jpg" 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-main.png" 
     style="max-width: 100%; height: auto;"
 </p>
 
@@ -91,7 +91,7 @@ For Pat Winlink, there is an option for autodialing. Using this in combination w
 
 <p align="center">
   <img 
-    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-pat-winlink.jpg" 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-pat-winlink.png" 
     style="max-width: 100%; height: auto;"
 </p>
 
@@ -99,7 +99,7 @@ You can also `shutdown` or `reboot` your system from `tnc2go`.
 
 <p align="center">
   <img 
-    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-power-settings.jpg" 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-power-settings.png" 
     style="max-width: 100%; height: auto;" 
     alt="TNC2Go Power Settings">
 </p>
