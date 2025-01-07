@@ -1,5 +1,7 @@
 # VE6DPC arcOS USER Modules:
 
+These are a set of custom USER modules to be used with [arcOS](https://arcos-linux.com/). If you haven't already downloaded arcOS, please do that first.
+
 ## Installing the USER modules:
 To get going, clone this repo into your profile:
 
