@@ -51,10 +51,21 @@ touch /ARCOS-DATA/.autostart
 ```
 ## Using tnc2go
 
-tnc2go is a solution that allows for headless control over an arcOS system provinding some TNC functionalities. To get access to `tnc2go`:
+tnc2go is a solution that allows for headless control over an arcOS system provinding some TNC functionalities. 
+
+<p align="center">
+  <img 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-main.jpg" 
+    style="max-width: 100%; height: auto;"
+</p>
+
+To get access to `tnc2go`:
 
 1. Connect to the same wifi network that your arcOS system. 
 2. Open a webrowser to the arcOS IP address interface. For example: `http://172.16.5.153:1880/ui/`
+
+NOTE: 
+> Check the IP address of your arcOS system before tryting to connect.
 
 The 3 main modems are:
 
@@ -73,15 +84,25 @@ Shortcuts to:
 2. VNC (browser based)
 3. Pat Winlink
 
-(EXPERIMENTAL)
+(EXPERIMENTAL - autoconnect function)
 For Pat Winlink, there is an option for autodialing. Using this in combination with Pat Winlink (pat http) allows an operator to:
 
 1) draft a Winlink message using Pat Winlink (browser based) and then 2) Use the `autoconnect` option to try to connect to a few RMS on a specific band.
 
+<p align="center">
+  <img 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-pat-winlink.jpg" 
+    style="max-width: 100%; height: auto;"
+</p>
+
 You can also `shutdown` or `reboot` your system from `tnc2go`. 
+
+<p align="center">
+  <img 
+    src="https://github.com/dcasati/QRV/blob/main/assets/tnc2go-power-settings.jpg" 
+    style="max-width: 100%; height: auto;" 
+    alt="TNC2Go Power Settings">
+</p>
 
 ## Make it your own
 `tnc2go` is built on top of `node-red`, allowing for various levels of customization. If you'd like to customize your system, open up a browser to the `node-red` ui at: `http://172.16.5.153:1880/`
-
-
-
