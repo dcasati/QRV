@@ -7,6 +7,9 @@ MAINTAINER =	Diego Casati VE6DPC
 
 SCRIPT =	60_TNC2GO.sh
 
+ENABLE_PRE_FETCH = Yes
+ENABLE_POST_INSTALL = Yes
+
 pre-fetch:
 	curl -fsSL https://deb.nodesource.com/setup_20.x -o setup_20.x.sh	
 	patch -p0 < patches/patch-setup_20.x.sh

@@ -6,10 +6,13 @@ DISTINFO ?= distinfo
 EXTRACT_SUFX ?= .deb
 DISTFILE ?= $(DISTNAME)_$(V)_$(SUFX)$(EXTRACT_SUFX)
 SITES ?= https://github.com/novnc/noVNC/archive/refs/tags/$(DISTNAME).zip
+
 NO_BUILD ?= No
+ENABLE_PRE_FETCH ?= No
+ENABLE_POST_INSTALL ?= No
 
 # station info
-MYCALL := $(shell head -n 1 $(HOME)/.station-info)
+MYCALL := $(shell head -n 1 /ARCOS-DATA/.station-info)
 
 # PATHS (Defines paths referencein the module)
 ARCOS_BIN_DIR = /opt/arcOS/bin
@@ -18,7 +21,7 @@ MODULE_BASE_DIR = /ARCOS-DATA/QRV/$(MYCALL)/arcos-linux-modules/USER
 
 
 # Default target
-all: help
+all: install
 
 # Help target
 help:
@@ -35,6 +38,12 @@ help:
 # Validate checksum and size against distinfo
 check: validate
 validate:
+	@echo "DISTNAME: $(DISTNAME)"
+	@echo "VERSION: $(V)"
+	@echo "SUFFIX: $(SUFX)"
+	@echo "DISTFILE: $(DISTFILE)"
+	@echo "DISTDIR: $(DISTDIR)"
+	@echo "SITES: $(SITES)"
 	@echo "Validating all files in $(DISTDIR)"
 	@if [ -d "$(DISTDIR)" ]; then \
 		for file in $(DISTDIR)/*; do \
@@ -77,10 +86,12 @@ distinfo:
 
 # Target to download the package
 fetch: validate
-	@$(MAKE) -pn | grep -q "^pre-fetch:" && { \
-                echo "Running pre-fetch steps..."; \
-                $(MAKE) pre-fetch; \
-        } || true;      
+	@if echo "$(ENABLE_PRE_FETCH)" | grep -iq "^yes$$"; then \
+	    echo "Running pre-fetch steps..."; \
+	    $(MAKE) pre-fetch; \
+	else \
+	    echo "Skipping pre-fetch: Disabled or not required."; \
+	fi
 
 	@if [ ! -f "$(DISTDIR)/$(DISTNAME)_$(V)_$(EXTRACT_SUFX)" ]; then \
                 if [ "$(EXTRACT_SUFX)" = ".deb" ]; then \
@@ -141,10 +152,10 @@ install:
 	    else \
 	        echo "Install target is not defined for $(EXTRACT_SUFX) packages."; \
 	    fi; \
-	    $(MAKE) -pn | grep -q "^post-install:" && { \
+	    if echo "$(ENABLE_POST_INSTALL)" | grep -iq "^yes$$"; then \
 	        echo "Running post-install steps..."; \
 	        $(MAKE) post-install; \
-	    } || true; \
+	    fi ; \
 	fi
 
 # Clean and distclean targets

@@ -112,7 +112,36 @@ def restart_vara():
     f"env WINEPREFIX='/home/user/.wine_vara_32' wine /home/user/.wine_vara_32/drive_c/VARA/VARA.exe > {VARA_LOG_FILE} 2>&1 &",
         shell=True
     )
-    wait_for_vara()
+
+def wait_for_vara():
+    """
+    Wait until VARA is running and accepting connections on port 8400.
+    Restart if not available within 10 seconds, up to 5 times, then bail out.
+    """
+    log("Waiting for VARA to start...")
+    max_retries = 5
+    retries = 0
+
+    while retries < max_retries:
+        start_time = time.time()
+        while True:
+            try:
+                log("Attempting connection to VARA...")
+                with socket.create_connection(("localhost", 8400), timeout=3):
+                    log("VARA is running and accepting connections on port 8400.")
+                    return  # Exit the function once successful
+            except (socket.timeout, ConnectionRefusedError):
+                if time.time() - start_time > 10:  # Wait for up to 10 seconds
+                    log(f"VARA did not start within 10 seconds. Attempt {retries + 1} of {max_retries}.")
+                    break  # Exit the inner loop and retry
+                time.sleep(1)
+        
+        # Increment retries and restart VARA
+        retries += 1
+        restart_vara()
+    
+    # If we exhausted all retries
+    raise RuntimeError("Failed to connect to VARA after 5 attempts.")
 
 def wait_for_flrig():
     """
@@ -136,23 +165,6 @@ def start_rigctld():
     wait_for_flrig()
     log("Starting rigctld...")
     subprocess.Popen("rigctld --model=4 > /dev/null 2>&1 &", shell=True)
-
-def wait_for_vara():
-    """
-    Wait until VARA is running and accepting connections on port 8400.
-    Restart if not available within 10 seconds.
-    """
-    log("Waiting for VARA to start...")
-    start_time = time.time()
-    while True:
-        try:
-            with socket.create_connection(("localhost", 8400), timeout=1):
-                log("VARA is running and accepting connections on port 8400.")
-                return
-        except (socket.timeout, ConnectionRefusedError):
-            if time.time() - start_time > 10:  # Increased timeout from 5 to 10 seconds
-                raise RuntimeError("VARA did not start within 10 seconds.")
-            time.sleep(1)
 
 def cleanup():
     """
