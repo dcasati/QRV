@@ -24,6 +24,7 @@ SAVE_DIR=$ARCOS_DATA/QRV/$MYCALL/SAVED/$MODULE
 
 ### MODULE COMMANDS FUNCTION ###
 module_commands () {
+	sudo cp pat-autoconnect.py  tnc2go-update.sh /opt/arcOS/bin/
 	sudo dpkg -i $MODULE_DIR/distfiles/*.deb
         sudo npm install -g --cache $MODULE_DIR/npm-cache/ --no-audit --prefer-offline --ignore-scripts node-red node-red-dashboard
 	cp $MODULE_DIR/pkg/flows.json $MODULE_DIR/run
