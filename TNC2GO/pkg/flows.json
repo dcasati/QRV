@@ -112,42 +112,17 @@
             "label": true
         },
         "nodes": [
-            "9bc041284f29894e",
-            "8198f7671e3a5329",
             "b550db02465b0e3d",
             "c3c07b179e858ba6",
             "44f48fa63a40e71c",
             "c990f436e8a61bee",
             "cddb5cd57e800458",
-            "370388b9b315ed28",
-            "55143b4b64f65443"
+            "370388b9b315ed28"
         ],
         "x": -22,
         "y": 1153,
         "w": 728,
         "h": 295.5
-    },
-    {
-        "id": "55143b4b64f65443",
-        "type": "group",
-        "z": "087e11fe2b6bda4c",
-        "g": "403df57ae7f1c8ab",
-        "style": {
-            "stroke": "#999999",
-            "stroke-opacity": "1",
-            "fill": "none",
-            "fill-opacity": "1",
-            "label": true,
-            "label-position": "nw",
-            "color": "#a4a4a4"
-        },
-        "nodes": [
-            "fabd98ab217849f8"
-        ],
-        "x": 4,
-        "y": 1179,
-        "w": 232,
-        "h": 82
     },
     {
         "id": "e1ddacc31990e572",
@@ -646,10 +621,10 @@
         "type": "exec",
         "z": "087e11fe2b6bda4c",
         "g": "428af6f86b508d3a",
-        "command": "varanny -config /opt/arcOS/configs/varanny.json",
-        "addpay": "payload",
-        "append": "on",
-        "useSpawn": "true",
+        "command": "sudo /usr/bin/systemctl start varanny",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
         "timer": "",
         "winHide": false,
         "oldrc": false,
@@ -669,7 +644,7 @@
         "type": "exec",
         "z": "087e11fe2b6bda4c",
         "g": "428af6f86b508d3a",
-        "command": "pkill varanny; pkill VARA",
+        "command": "sudo /usr/bin/systemctl stop varanny",
         "addpay": "",
         "append": "",
         "useSpawn": "false",
@@ -1213,110 +1188,6 @@
         ]
     },
     {
-        "id": "fabd98ab217849f8",
-        "type": "ui_button",
-        "z": "087e11fe2b6bda4c",
-        "g": "55143b4b64f65443",
-        "name": "",
-        "group": "6515a2df7f2a50a8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Pat Autoconnect",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
-        "x": 120,
-        "y": 1220,
-        "wires": [
-            [
-                "9bc041284f29894e"
-            ]
-        ]
-    },
-    {
-        "id": "9bc041284f29894e",
-        "type": "ui_dropdown",
-        "z": "087e11fe2b6bda4c",
-        "g": "403df57ae7f1c8ab",
-        "name": "Band Selection",
-        "label": "band",
-        "tooltip": "",
-        "place": "Select option",
-        "group": "6515a2df7f2a50a8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "15m",
-                "value": "15m",
-                "type": "str"
-            },
-            {
-                "label": "17m",
-                "value": "17m",
-                "type": "str"
-            },
-            {
-                "label": "20m",
-                "value": "20m",
-                "type": "str"
-            },
-            {
-                "label": "40m",
-                "value": "40m",
-                "type": "str"
-            },
-            {
-                "label": "80m",
-                "value": "80m",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "topic",
-        "topicType": "msg",
-        "className": "",
-        "x": 320,
-        "y": 1220,
-        "wires": [
-            [
-                "8198f7671e3a5329"
-            ]
-        ]
-    },
-    {
-        "id": "8198f7671e3a5329",
-        "type": "exec",
-        "z": "087e11fe2b6bda4c",
-        "g": "403df57ae7f1c8ab",
-        "command": "/opt/arcOS/bin/pat-autoconnect.py --band ",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "",
-        "winHide": false,
-        "oldrc": false,
-        "name": "pat-autoconnect.py",
-        "x": 570,
-        "y": 1220,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
         "id": "b550db02465b0e3d",
         "type": "inject",
         "z": "087e11fe2b6bda4c",
@@ -1572,5 +1443,463 @@
             [],
             []
         ]
+    },
+    {
+        "id": "a1b2c3d4e5f60001",
+        "type": "ui_group",
+        "name": "VARA Service",
+        "tab": "e1ddacc31990e572",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a1b2c3d4e5f60002",
+        "type": "group",
+        "z": "087e11fe2b6bda4c",
+        "name": "VARA Service",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "a1b2c3d4e5f60003",
+            "a1b2c3d4e5f60004",
+            "a1b2c3d4e5f60005",
+            "a1b2c3d4e5f60006",
+            "a1b2c3d4e5f60007",
+            "a1b2c3d4e5f60008",
+            "a1b2c3d4e5f60009",
+            "a1b2c3d4e5f6000a",
+            "vara_ver_0001",
+            "vara_ver_0002",
+            "vara_ver_0003",
+            "vara_ver_0004",
+            "vara_ver_0005",
+            "vara_ver_0006",
+            "vara_ver_0007",
+            "vara_ver_0008",
+            "vara_ver_0009",
+            "vara_ver_0010"
+        ],
+        "x": 34,
+        "y": 1490,
+        "w": 980,
+        "h": 400
+    },
+    {
+        "id": "a1b2c3d4e5f60003",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "poll 5s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.5,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1550,
+        "wires": [
+            [
+                "a1b2c3d4e5f60004",
+                "vara_ver_0006"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60004",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "sudo /usr/bin/systemctl is-active varanny",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "is-active?",
+        "x": 300,
+        "y": 1550,
+        "wires": [
+            [
+                "a1b2c3d4e5f60005"
+            ],
+            [
+                "a1b2c3d4e5f60005"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60005",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "parse status",
+        "func": "const s = (msg.payload || '').trim();\nlet label, bool;\nif (s === 'active') {\n    label = '\\u25cf Running';\n    bool  = true;\n} else if (s === 'activating') {\n    label = '\\u25d4 Starting\\u2026';\n    bool  = true;\n} else {\n    label = '\\u25cb Stopped';\n    bool  = false;\n}\nreturn [\n    { payload: label },\n    { payload: bool  }\n];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1550,
+        "wires": [
+            [
+                "a1b2c3d4e5f60006"
+            ],
+            [
+                "a1b2c3d4e5f60007"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60006",
+        "type": "ui_text",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "group": "a1b2c3d4e5f60001",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "VARA Status",
+        "label": "Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "a1b2c3d4e5f60007",
+        "type": "ui_switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "",
+        "label": "VARA",
+        "tooltip": "Start / Stop varanny service",
+        "group": "a1b2c3d4e5f60001",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 490,
+        "y": 1620,
+        "wires": [
+            [
+                "a1b2c3d4e5f60008"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60008",
+        "type": "switch",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "on/off",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 1620,
+        "wires": [
+            [
+                "a1b2c3d4e5f60009"
+            ],
+            [
+                "a1b2c3d4e5f6000a"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f60009",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "sudo /usr/bin/systemctl start varanny",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "start varanny",
+        "x": 860,
+        "y": 1590,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f6000a",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "sudo /usr/bin/systemctl stop varanny",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "stop varanny",
+        "x": 860,
+        "y": 1660,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "vara_ver_0001",
+        "type": "inject",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "startup",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 1720,
+        "wires": [
+            [
+                "vara_ver_0002",
+                "vara_ver_0004"
+            ]
+        ]
+    },
+    {
+        "id": "vara_ver_0002",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "head -1 '/opt/vara/wineprefixes/vara/drive_c/VARA/ChangeLog.txt' | grep -oE 'v[0-9]+\\.[0-9]+\\.[0-9]+'",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "VARA HF ver",
+        "x": 320,
+        "y": 1700,
+        "wires": [
+            [
+                "vara_ver_0003"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "vara_ver_0003",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "fmt HF",
+        "func": "msg.payload = (msg.payload || '').trim() || '--';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1700,
+        "wires": [
+            [
+                "vara_ver_0008"
+            ]
+        ]
+    },
+    {
+        "id": "vara_ver_0004",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "head -1 '/opt/vara/wineprefixes/vara/drive_c/VARA FM/ChangeLog.txt' | grep -oE 'v[0-9]+\\.[0-9]+\\.[0-9]+'",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "VARA FM ver",
+        "x": 320,
+        "y": 1755,
+        "wires": [
+            [
+                "vara_ver_0005"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "vara_ver_0005",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "fmt FM",
+        "func": "msg.payload = (msg.payload || '').trim() || '--';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1755,
+        "wires": [
+            [
+                "vara_ver_0009"
+            ]
+        ]
+    },
+    {
+        "id": "vara_ver_0006",
+        "type": "exec",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "command": "/usr/bin/systemctl show varanny --property=ActiveEnterTimestamp --value",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "since?",
+        "x": 300,
+        "y": 1810,
+        "wires": [
+            [
+                "vara_ver_0007"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "vara_ver_0007",
+        "type": "function",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "name": "parse since",
+        "func": "const raw = (msg.payload || '').trim();\nif (!raw || raw === 'n/a') { msg.payload = '--'; return msg; }\nconst m = raw.match(/(\\d{4}-\\d{2}-\\d{2}) (\\d{2}:\\d{2}):\\d{2}/);\nif (!m) { msg.payload = '--'; return msg; }\nmsg.payload = m[1] + ' ' + m[2];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 1810,
+        "wires": [
+            [
+                "vara_ver_0010"
+            ]
+        ]
+    },
+    {
+        "id": "vara_ver_0008",
+        "type": "ui_text",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "group": "a1b2c3d4e5f60001",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "VARA HF ver",
+        "label": "VARA HF",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "vara_ver_0009",
+        "type": "ui_text",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "group": "a1b2c3d4e5f60001",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "VARA FM ver",
+        "label": "VARA FM",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 710,
+        "y": 1755,
+        "wires": []
+    },
+    {
+        "id": "vara_ver_0010",
+        "type": "ui_text",
+        "z": "087e11fe2b6bda4c",
+        "g": "a1b2c3d4e5f60002",
+        "group": "a1b2c3d4e5f60001",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Uptime",
+        "label": "Since",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 1810,
+        "wires": []
     }
 ]

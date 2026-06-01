@@ -12,12 +12,12 @@ ENABLE_PRE_FETCH ?= No
 ENABLE_POST_INSTALL ?= No
 
 # station info
-MYCALL := $(shell head -n 1 /ARCOS-DATA/.station-info)
+MYCALL := $(shell head -n 1 /arcHIVE/.station-info)
 
 # PATHS (Defines paths referencein the module)
 ARCOS_BIN_DIR = /opt/arcOS/bin
 ARCOS_CONFIG_DIR = /opt/arcOS/configs
-MODULE_BASE_DIR = /ARCOS-DATA/QRV/$(MYCALL)/arcos-linux-modules/USER
+MODULE_BASE_DIR = /arcHIVE/QRV/$(MYCALL)/arcos-linux-modules/USER
 
 
 # Default target

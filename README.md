@@ -7,7 +7,7 @@ To get going, clone this repo into your profile:
 
 ```bash
 MYCALL=$(head -n 1 $HOME/.station-info)
-cd /ARCOS-DATA/QRV/$MYCALL/arcos-linux-modules/USER/
+cd /arcHIVE/QRV/$MYCALL/arcos-linux-modules/USER/
 ```
 Once there, clone this repo:
 
@@ -21,7 +21,7 @@ These modules where designed to to allow for a system to run offline without any
 To prepare your system, run the following command:
 
 ```bash
-cd /ARCOS-DATA/QRV/$MYCALL/arcos-linux-modules/USER/
+cd /arcHIVE/QRV/$MYCALL/arcos-linux-modules/USER/
 make install
 ```
 
@@ -49,7 +49,7 @@ This will download all of required files and components and will also setup your
 If you'd like the modules, including the `tnc2go` module, running automatically when the system bootstraps, add the following file to your profile:
 
 ```bash
-touch /ARCOS-DATA/.autostart 
+touch /arcHIVE/.autostart 
 ```
 ## Using tnc2go
 

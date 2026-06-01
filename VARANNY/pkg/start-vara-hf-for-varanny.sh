@@ -33,3 +33,25 @@ done
 
 echo "VARA is now listening on port 8400."
 
+# Route PipeWire/PulseAudio to the Digirig (C-Media USB PnP Sound Device)
+RADIO_SINK="alsa_output.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.analog-stereo"
+RADIO_SOURCE="alsa_input.usb-C-Media_Electronics_Inc._USB_PnP_Sound_Device-00.mono-fallback"
+
+if [ -n "$RADIO_SINK" ]; then
+    echo "Setting PulseAudio default sink to: $RADIO_SINK"
+    pactl set-default-sink "$RADIO_SINK"
+    # Also move any existing VARA audio stream to the radio sink
+    pactl list sink-inputs short 2>/dev/null | awk '{print $1}' | while read -r input; do
+        pactl move-sink-input "$input" "$RADIO_SINK" 2>/dev/null
+    done
+else
+    echo "WARNING: No USB audio sink found. VARA audio may not reach the radio."
+fi
+
+if [ -n "$RADIO_SOURCE" ]; then
+    echo "Setting PulseAudio default source to: $RADIO_SOURCE"
+    pactl set-default-source "$RADIO_SOURCE"
+else
+    echo "WARNING: No USB audio source found. VARA audio may not reach the radio."
+fi
+

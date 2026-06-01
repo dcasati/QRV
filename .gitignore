@@ -15,3 +15,6 @@ FL-SUITE/pkg/notify.prefs
 FL-SUITE/pkg/fldigi_def.xml
 
 VARANNY/varanny/
+
+# Ignore macOS AppleDouble metadata files
+._*
